@@ -31,7 +31,7 @@ export const Home = () => {
 					))}
 				</div>
 			) : (
-				<p>Cargando contactos...</p>
+				<p>No existen contactos aún...</p>
 			)}
 
 			<hr />
