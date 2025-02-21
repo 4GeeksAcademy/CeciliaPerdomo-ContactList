@@ -1,6 +1,6 @@
 import rigoImageUrl from "../assets/img/rigo-baby.jpg";
 
-export const Card = ({ id, name, address, phone, email, onDelete }) => {
+export const Card = ({ id, name, address, phone, email, onDelete, onEdit }) => {
     return (
         <div className="card mb-3" style={{ maxWidth: "540px" }}>
             <div className="row g-0">
@@ -13,7 +13,15 @@ export const Card = ({ id, name, address, phone, email, onDelete }) => {
                             <h3 className="card-title text-start">{name}</h3>
                             <div>
                                 {/* Editar */}
-                                <button className="btn btn-outline-info me-2"><i className="fa fa-pen"></i></button>
+                                <button
+                                    type="button"
+                                    className="btn btn-outline-info me-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModalEdit"
+                                    onClick={() => onEdit()}
+                                >
+                                    <i className="fa fa-pen"></i>
+                                </button>
 
                                 {/* Borrar */}
                                 <button
